@@ -3,17 +3,17 @@ package main
 import (
 	"log"
 
-	"github.com/jpillora/cloud-torrent/server"
-	"github.com/jpillora/opts"
+	"github.com/thirumurthy/torrent/server"
+	"github.com/thirumurthy/opts"
 )
 
 var VERSION = "0.0.0-src" //set with ldflags
 
 func main() {
 	s := server.Server{
-		Title:      "Cloud Torrent",
+		Title:      "Torrent",
 		Port:       3000,
-		ConfigPath: "cloud-torrent.json",
+		ConfigPath: "torrent.json",
 	}
 
 	o := opts.New(&s)
