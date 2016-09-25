@@ -1,12 +1,12 @@
 FROM alpine
-MAINTAINER dev@jpillora.com
+MAINTAINER dev@thirumurthy.com
 
 #configure go path
 ENV GOPATH /root/go
 ENV PATH $PATH:/usr/local/go/bin:$GOPATH/bin
 
 #package
-ENV PACKAGE github.com/jpillora/cloud-torrent
+ENV PACKAGE github.com/thirumurthy/torrent
 ENV PACKAGE_DIR $GOPATH/src/$PACKAGE
 
 #install go and godep, then compile cloud-torrent using godep, then wipe build tools
@@ -23,4 +23,4 @@ RUN apk update && \
     echo "Installed $PACKAGE"
 
 #run package
-ENTRYPOINT ["cloud-torrent"]
+ENTRYPOINT ["torrent"]
